@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- cdn path for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"/>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+  
+     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+     <!-- custom css file  -->
+     <link rel="stylesheet" href="css/main.css">
+     <style>
+        body{
+  background-color: #7E57C2;
+}
+
+.mt-100{
+  margin-top: 200px;
+}
+.progress {
+  width: 150px;
+  height: 150px !important;
+  float: left; 
+  line-height: 150px;
+  background: none;
+  margin: 20px;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #7E57C2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left {
+  left: 0;
+}
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right {
+  right: 0;
+}
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: #000;
+  font-size: 24px;
+  color: #fff;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.progress.blue .progress-bar {
+  border-color: #049dff;
+}
+.progress.blue .progress-left .progress-bar {
+  animation: loading-1 1.5s linear forwards 1.8s;
+}
+.progress.pink .progress-bar {
+  border-color: pink
+}
+.progress.pink .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+
+.progress.yellow .progress-bar {
+  border-color: #fdba04;
+}
+.progress.yellow .progress-right .progress-bar {
+  animation: loading-3 1.8s linear forwards;
+}
+.progress.green .progress-bar {
+  border-color: #1adb10;
+}
+.progress.green .progress-left .progress-bar {
+  animation: loading-4 1.5s linear forwards 1.8s;
+}
+.progress.or .progress-bar {
+  border-color: rgb(240, 84, 0);
+}
+.progress.or .progress-left .progress-bar {
+  animation: loading-5 1.5s linear forwards 1.8s;
+}
+
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(210deg);
+    transform: rotate(210deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+@keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  
+}
+@keyframes loading-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+     </style>
+
+</head>
+<body>
+
+    <!-- header section starts here -->
+    <div class="header">
+
+        <a href="index.php" class="logo" >
+            <img src="img/main-logo.png" alt="">
+         </a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+
+                <li><a href="index.php">home</a></li>
+                <li><a href="admin/index.php">Admin</a></li>
+
+                <!-- here we have our dropdown menu -->
+                <li><a href="login.php"> 	
+                    Login
+                </a>
+                </li>
+
+                <!-- here we also have another drop down menu -->
+                <li><a href="registration.php">Register
+                 </a>
+                </li>
+
+                <li><a href="contact.php">contact</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <!-- header section ends here -->
+
+
+    <!-- home section starts here -->
+    <section class="home">
+        <!-- <div class="image">
+            <img src="" alt="">
+        </div> -->
+        <!-- <div class="content">
+            <div class="cities">
+                <img src="" alt="">
+            </div>
+            <h3></h3>
+            <p>
+                
+            </p>
+            <a href="" class=""></a>
+        </div> -->
+        <div class="row d-flex justify-content-center mt-100">
+
+            <div class="col-md-6">
+ 
+
+                <div class="progress blue">
+               
+                  <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value"><h3>45%</h3> Floor 1</div>
+                </div>
+ 
+                <div class="progress pink">
+               
+                    <span class="progress-right">
+                                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value"><h3>30%</h3> Floor 2</div>
+                  </div>
+                
+                  <div class="progress yellow">
+                    <span class="progress-left">
+                                    <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value"><h3>35%</h3> Floor 3</div>
+                  </div>
+
+                  <div class="progress green">
+                    <span class="progress-left">
+                                    <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value"><h3>45%</h3> Floor 4</div>                  
+                </div>
+
+                  <div class="progress or">
+                    <span class="progress-left">
+                                    <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value"><h3>85%</h3> Floor 5</div>
+                
+                </div>
+                
+               
+            </div>
+           
+        </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- categories section starts here -->
+    <section class="category">
+        <a href="floor1.html" class="box">
+            <img src="Conference presentation _Outline.svg" alt="">
+            <h3>Floor 1</h3>
+        </a>
+        <a href="floor2.html" class="box">
+            <img src="Chart_Outline.svg" alt="">
+            <h3>Floor 2</h3>
+        </a>
+        <a href="floor3.html" class="box">
+            <img src ="Video tutorial _Outline.svg" alt="">
+            <h3>Floor 3</h3>
+        </a>
+        <a href="floor4.html" class="box">
+            <img src="Dream_Outline.svg" alt="">
+            <h3>Floor 4</h3>
+        </a>
+        <a href="floor5.html" class="box">
+            <img src="bedroom.png" alt="">
+            <h3>Floor 5</h3>
+        </a>
+    </section>
+      <!-- footer section starts here -->
+      <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>explore</h3>
+                <a href="index.php"> <i class="fas fa-arrow-right"></i>home </a>
+                <a href="admin/index.php"> <i class="fas fa-arrow-right"></i>Admin </a>
+                <a href="login.php"> <i class="fas fa-arrow-right"></i>Login </a>
+                <a href="registration.php"> <i class="fas fa-arrow-right"></i>Register </a>
+                <a href="contact.php"> <i class="fas fa-arrow-right"></i>contact </a>
+            </div>
+            <div class="box">
+                <h3>categories</h3>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>Room with 2 member</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>Room with 4 member</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>Room with 6 member </a>
+                </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>my account </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>feedback </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>help center</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>certification </a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook"></i>facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i>twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i>instagram </a>
+                <a href="#"> <i class="fab fa-linkedin"></i>linkedin </a>
+                <a href="#"> <i class="fab fa-pinterest"></i>pinterest </a>
+                <a href="#"> <i class="fab fa-github"></i>github </a>
+            </div>
+        </div>
+        <div class="credit"> © Copyright <span>Dormitory Booking</span> | all rights are reserved</div>
+    </section>
+    <!-- footer scetion ends here -->
+    
+</body>
+<script src="js/script.js"></script>
+
+   
+    </html>

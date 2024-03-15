@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- cdn path for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="floor1.css">
+
+     <!-- custom css file  -->
+     <link rel="stylesheet" href="css/main.css">
+     <style>
+    
+      h2 {text-align: center;}
+      h3 {text-align: center;}
+      
+      #circle1 {
+        width: 30px;
+        height: 30px;
+        background: rgb(254, 41, 41);
+        border-radius: 50%;
+      }
+      #circle2 {
+        width: 30px;
+        height: 30px;
+        border-radius: 25px;
+        background: rgb(8, 220, 36);
+        border-radius: 50%;
+
+      }
+      #circle3 {
+        width: 30px;
+      height: 30px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: rgb(59, 22, 227);
+
+      }
+      
+      .flex-cp
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 33px;
+      }
+
+      .flex-cp h4
+      {
+        font-size: 18px;
+      }
+
+      .headline-cp
+      {
+        width: fit-content;
+        font-size: 1.35rem;
+        text-align: center;
+        font-weight: 900;
+        
+        text-transform: uppercase;
+        margin: 10px auto;
+        background-color: rgb(227, 239, 243);
+        padding: 12px 18px;
+        border-radius: 3px;
+        letter-spacing: 1px;
+        margin-bottom: 20px !important;
+      }
+      
+      </style>
+
+</head>
+<body>
+
+    <!-- header section starts here -->
+    <div class="header">
+
+        <a href="index.php" class="logo" >
+            <img src="img/main-logo.png" alt="">
+         </a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+
+                <li><a href="index.php">home</a></li>
+                <li><a href="admin/index.php">Admin</a></li>
+
+                <!-- here we have our dropdown menu -->
+                <li><a href="login.php"> 	
+                    Login
+                </a>
+                </li>
+
+                <!-- here we also have another drop down menu -->
+                <li><a href="registration.php">Register
+                 </a>
+                </li>
+
+                <li><a href="contact.php">contact</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <!-- header section ends here -->
+
+
+    <!-- home section starts here -->
+    <section class="home">
+        <div class="image">
+            <img src="" alt="">
+        </div>
+        <div class="content">
+            <div class="cities">
+                <img src="" alt="">
+            </div>
+            <h3></h3>
+            <p>
+                
+            </p>
+            <a href="" class=""></a>
+        </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- categories section starts here -->
+    <div class="headline-cp"><i class="fa fa-building" style="margin-right : 8px;"></i>Book Rooms ! Stay in place</div>
+    <div class="flex-cp">
+        <div id="circle1"></div><h4>Booked</h4>
+    </div>
+    <div class="flex-cp">
+        <div id="circle2"></div><h4>Not Booked</h4>
+    </div>
+    <div class="flex-cp">
+        <div id="circle3"></div><h4>Waiting</h4>
+    </div>
+    
+ 
+   
+    <div class="container">
+      <div class="box"><a href="registration.php" class="btn btn-secondary",button style="background-color: chartreuse;">Book</a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREwL7HYBr1CxIbN8p28igwaSHNrGPTJxftC_hsrQN2tE5PFPKtVbZ-8O3nv7_Txx2u3UI&usqp=CAU", height="300px", width="400px"></div>
+      <div class="box"><a href="registration.php" class="btn btn-primary">Book</a><img src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg", height="350px", width="400px"></div>
+      <div class="box"><a href="#" class="btn btn-primary",button style="background-color: rgb(248, 8, 8);">Book</a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ytRzZfDVSi1GW2D8JaXNOmgLtxlRBiZarA&usqp=CAU", height="300px", width="400px"></div>
+      <div class="box"><a href="#" class="btn btn-primary",button style="background-color: rgb(248, 8, 8);">Book</a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8md6231ggonBZZ_w-6Lx1BV3mv_dw5HVz6g&usqp=CAU", height="300px", width="400px"></div>
+      <div class="box"><a href="registration.php" class="btn btn-primary",button style="background-color: chartreuse;">Book</a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbf2Ae7ejuqDFhPIyXTlPjlyhZo2lvYyKULg&usqp=CAU", height="300px", width="370px"></div>
+      <div class="box"><a href="#" class="btn btn-primary",button style="background-color: rgb(248, 8, 8);">Book</a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2UzF9tXCnthwwgDDVHDjRYVyKuluhLlI0IQ&usqp=CAU", height="300px", width="400px"></div>
+      <div class="box"><a href="registration.php" class="btn btn-primary",button style="background-color: chartreuse;">Book</a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ytRzZfDVSi1GW2D8JaXNOmgLtxlRBiZarA&usqp=CAU", height="300px", width="400px"></div>
+      <div class="box"><a href="registration.php" class="btn btn-primary",button style="background-color: chartreuse;">Book</a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ytRzZfDVSi1GW2D8JaXNOmgLtxlRBiZarA&usqp=CAU", height="300px", width="400px"></div>
+      <div class="box"><a href="registration.php" class="btn btn-primary",button style="background-color: chartreuse;">Book</a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ytRzZfDVSi1GW2D8JaXNOmgLtxlRBiZarA&usqp=CAU", height="300px", width="400px"></div>
+      
+      
+     
+      
+    </div>
+    <div class="row">
+
+      <form action="">
+          <h3></h3>
+          <input type="text" name="" id="" class="box" placeholder="">
+          <input type="number" name="" id="" class="box" placeholder="">
+          <input type="email" name="" id="" class="box" placeholder="">
+          <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
+          <input type="submit" name="" value = "" id="" class="">
+      </form>
+
+      <iframe src="floor1map.png" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <!-- categories section ends here -->
+        
+      <!-- footer section starts here -->
+      <section class="footer">
+        <div class="box-container">
+          
+            
+        </div>
+        <div class="credit"> © Copyright <span>Dormitory Booking</span> | all rights are reserved</div>
+    </section>
+    <!-- footer scetion ends here -->
+    
+</body>
+<script src="js/script.js"></script>
+
+   
+    </html>
